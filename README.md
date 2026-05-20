@@ -255,3 +255,5 @@ MIT
 - [DevOps to Platform Engineering Guide](https://github.com/essentialols/devops-platform-engineering-guide) - Career transition paths and upskilling roadmaps
 - [Go Modular Monolith Guide](https://github.com/essentialols/go-modular-monolith-guide) - Architecture patterns for large Go codebases
 
+
+> Part of [Community Dev Guides](https://github.com/essentialols/community-dev-guides) - a curated collection of community-driven developer guides.
