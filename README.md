@@ -23,6 +23,8 @@ _Built from 72 real user reports aggregated from [r/LocalLLaMA](https://reddit.c
 - [Cost Analysis](#cost-analysis-maximizing-value-at-48gb)
 - [Gotchas & Warnings](#gotchas-warnings-and-community-wisdom)
 - [Migration Path](#migration-path-beyond-48gb-or-deeper-optimization)
+- [VRAM Calculator](#vram-calculator-know-before-you-download)
+- [Multi-GPU Bandwidth Analysis](#multi-gpu-reality-check-pcie-bandwidth-bottleneck)
 - [Benchmark Scripts](#run-your-own-benchmarks)
 
 ---
