@@ -1,90 +1,232 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Community Dev Guides - Real data from real developers</title>
-    <meta name="description" content="Curated developer guides built from real community data. Local LLM benchmarks, DevOps career paths, Go architecture patterns, and more. Not generic AI-generated content.">
+    <meta
+      name="description"
+      content="Curated developer guides built from real community data. Local LLM benchmarks, DevOps career paths, Go architecture patterns, and more. Not generic AI-generated content."
+    />
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-               line-height: 1.7; color: #1a1a1a; max-width: 800px; margin: 0 auto; padding: 2rem 1rem; }
-        h1 { font-size: 2.2rem; margin-bottom: 0.3rem; }
-        .subtitle { color: #555; font-size: 1.1rem; margin-bottom: 2rem; }
-        .stats { display: flex; gap: 2rem; margin: 1.5rem 0; flex-wrap: wrap; }
-        .stat { text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 8px; min-width: 120px; }
-        .stat-num { font-size: 1.8rem; font-weight: 700; color: #0066cc; }
-        .stat-label { font-size: 0.8rem; color: #666; }
-        .guide { border: 1px solid #e1e4e8; border-radius: 8px; padding: 1.5rem; margin: 1rem 0;
-                 transition: border-color 0.2s; }
-        .guide:hover { border-color: #0066cc; }
-        .guide h3 { margin-bottom: 0.3rem; }
-        .guide h3 a { color: #0066cc; text-decoration: none; }
-        .guide h3 a:hover { text-decoration: underline; }
-        .guide p { color: #444; font-size: 0.95rem; }
-        .guide .meta { color: #888; font-size: 0.85rem; margin-top: 0.5rem; }
-        .category { margin-top: 2rem; }
-        .category h2 { font-size: 1.3rem; color: #333; border-bottom: 2px solid #e1e4e8;
-                       padding-bottom: 0.3rem; margin-bottom: 1rem; }
-        footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #eee;
-                 color: #888; font-size: 0.85rem; }
-        footer a { color: #0066cc; }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+        line-height: 1.7;
+        color: #1a1a1a;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+      h1 {
+        font-size: 2.2rem;
+        margin-bottom: 0.3rem;
+      }
+      .subtitle {
+        color: #555;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+      }
+      .stats {
+        display: flex;
+        gap: 2rem;
+        margin: 1.5rem 0;
+        flex-wrap: wrap;
+      }
+      .stat {
+        text-align: center;
+        padding: 1rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+        min-width: 120px;
+      }
+      .stat-num {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #0066cc;
+      }
+      .stat-label {
+        font-size: 0.8rem;
+        color: #666;
+      }
+      .guide {
+        border: 1px solid #e1e4e8;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin: 1rem 0;
+        transition: border-color 0.2s;
+      }
+      .guide:hover {
+        border-color: #0066cc;
+      }
+      .guide h3 {
+        margin-bottom: 0.3rem;
+      }
+      .guide h3 a {
+        color: #0066cc;
+        text-decoration: none;
+      }
+      .guide h3 a:hover {
+        text-decoration: underline;
+      }
+      .guide p {
+        color: #444;
+        font-size: 0.95rem;
+      }
+      .guide .meta {
+        color: #888;
+        font-size: 0.85rem;
+        margin-top: 0.5rem;
+      }
+      .category {
+        margin-top: 2rem;
+      }
+      .category h2 {
+        font-size: 1.3rem;
+        color: #333;
+        border-bottom: 2px solid #e1e4e8;
+        padding-bottom: 0.3rem;
+        margin-bottom: 1rem;
+      }
+      footer {
+        margin-top: 3rem;
+        padding-top: 1rem;
+        border-top: 1px solid #eee;
+        color: #888;
+        font-size: 0.85rem;
+      }
+      footer a {
+        color: #0066cc;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Community Dev Guides</h1>
-    <p class="subtitle">Real data from real developers. Not another LLM-generated listicle.</p>
+    <p class="subtitle">
+      Real data from real developers. Not another LLM-generated listicle.
+    </p>
 
     <div class="stats">
-        <div class="stat"><div class="stat-num">5</div><div class="stat-label">Guides</div></div>
-        <div class="stat"><div class="stat-num">147</div><div class="stat-label">Data Points</div></div>
-        <div class="stat"><div class="stat-num">265</div><div class="stat-label">User Reports</div></div>
+      <div class="stat">
+        <div class="stat-num">5</div>
+        <div class="stat-label">Guides</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">147</div>
+        <div class="stat-label">Data Points</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">265</div>
+        <div class="stat-label">User Reports</div>
+      </div>
     </div>
 
     <div class="category">
-        <h2>AI / Local LLMs</h2>
-        <div class="guide">
-            <h3><a href="https://github.com/essentialols/48gb-vram-llm-guide">48GB VRAM LLM Playbook</a></h3>
-            <p>Model selection, quantization configs, VRAM calculator, multi-GPU bandwidth analysis, and benchmark scripts for 48GB setups.</p>
-            <div class="meta">38 data points from 72 user reports | Includes VRAM formulas and PCIe bottleneck analysis</div>
+      <h2>AI / Local LLMs</h2>
+      <div class="guide">
+        <h3>
+          <a href="https://github.com/essentialols/48gb-vram-llm-guide"
+            >48GB VRAM LLM Playbook</a
+          >
+        </h3>
+        <p>
+          Model selection, quantization configs, VRAM calculator, multi-GPU
+          bandwidth analysis, and benchmark scripts for 48GB setups.
+        </p>
+        <div class="meta">
+          38 data points from 72 user reports | Includes VRAM formulas and PCIe
+          bottleneck analysis
         </div>
+      </div>
     </div>
 
     <div class="category">
-        <h2>DevOps / Infrastructure</h2>
-        <div class="guide">
-            <h3><a href="https://github.com/essentialols/ai-infrastructure-as-code-guide">AI for Infrastructure as Code</a></h3>
-            <p>How DevOps teams actually use LLMs for Terraform, CloudFormation, and Bicep. Real adoption data.</p>
-            <div class="meta">16 data points from 30 practitioners</div>
+      <h2>DevOps / Infrastructure</h2>
+      <div class="guide">
+        <h3>
+          <a
+            href="https://github.com/essentialols/ai-infrastructure-as-code-guide"
+            >AI for Infrastructure as Code</a
+          >
+        </h3>
+        <p>
+          How DevOps teams actually use LLMs for Terraform, CloudFormation, and
+          Bicep. Real adoption data.
+        </p>
+        <div class="meta">16 data points from 30 practitioners</div>
+      </div>
+      <div class="guide">
+        <h3>
+          <a
+            href="https://github.com/essentialols/devops-platform-engineering-guide"
+            >DevOps to Platform Engineering</a
+          >
+        </h3>
+        <p>
+          Career transition roadmaps with skills readiness matrix. Traditional
+          DevOps vs Platform Eng vs MLOps.
+        </p>
+        <div class="meta">
+          30 data points from 49 engineers | Includes skills readiness matrix
         </div>
-        <div class="guide">
-            <h3><a href="https://github.com/essentialols/devops-platform-engineering-guide">DevOps to Platform Engineering</a></h3>
-            <p>Career transition roadmaps with skills readiness matrix. Traditional DevOps vs Platform Eng vs MLOps.</p>
-            <div class="meta">30 data points from 49 engineers | Includes skills readiness matrix</div>
-        </div>
+      </div>
     </div>
 
     <div class="category">
-        <h2>Software Engineering</h2>
-        <div class="guide">
-            <h3><a href="https://github.com/essentialols/go-modular-monolith-guide">Go Modular Monolith Architecture</a></h3>
-            <p>Real patterns and pitfalls for structuring large Go codebases without drowning in complexity.</p>
-            <div class="meta">7 data points from 17 engineers</div>
-        </div>
+      <h2>Software Engineering</h2>
+      <div class="guide">
+        <h3>
+          <a href="https://github.com/essentialols/go-modular-monolith-guide"
+            >Go Modular Monolith Architecture</a
+          >
+        </h3>
+        <p>
+          Real patterns and pitfalls for structuring large Go codebases without
+          drowning in complexity.
+        </p>
+        <div class="meta">7 data points from 17 engineers</div>
+      </div>
     </div>
 
     <div class="category">
-        <h2>Career</h2>
-        <div class="guide">
-            <h3><a href="https://github.com/essentialols/entry-level-dev-survival-guide">Entry-Level Dev Survival Guide</a></h3>
-            <p>What actually works for landing dev jobs in 2025-2026. Hiring data, portfolio strategies, and career paths.</p>
-            <div class="meta">56 data points from 97 users | r/webdev (355 upvotes)</div>
+      <h2>Career</h2>
+      <div class="guide">
+        <h3>
+          <a
+            href="https://github.com/essentialols/entry-level-dev-survival-guide"
+            >Entry-Level Dev Survival Guide</a
+          >
+        </h3>
+        <p>
+          What actually works for landing dev jobs in 2025-2026. Hiring data,
+          portfolio strategies, and career paths.
+        </p>
+        <div class="meta">
+          56 data points from 97 users | r/webdev (355 upvotes)
         </div>
+      </div>
     </div>
 
     <footer>
-        <p>Every guide is built from real community discussions: actual benchmarks, tested solutions, and gotchas reported by practitioners.</p>
-        <p><a href="https://github.com/essentialols/community-dev-guides">View on GitHub</a></p>
+      <p>
+        Every guide is built from real community discussions with numbered
+        source references. Written in the style of
+        <a href="https://tonisagrista.com/blog/2026/quantization/"
+          >Toni Sagrista</a
+        >
+        and
+        <a href="https://magazine.sebastianraschka.com">Sebastian Raschka</a>.
+      </p>
+      <p>
+        <a href="https://github.com/essentialols/community-dev-guides"
+          >View on GitHub</a
+        >
+      </p>
     </footer>
-</body>
+  </body>
 </html>
