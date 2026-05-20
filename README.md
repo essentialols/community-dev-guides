@@ -246,3 +246,12 @@ Originally inspired by [this r/LocalLLaMA discussion](https://reddit.com/r/Local
 ## License
 
 MIT
+
+
+---
+
+## Related Guides
+
+- [DevOps to Platform Engineering Guide](https://github.com/essentialols/devops-platform-engineering-guide) - Career transition paths and upskilling roadmaps
+- [Go Modular Monolith Guide](https://github.com/essentialols/go-modular-monolith-guide) - Architecture patterns for large Go codebases
+
