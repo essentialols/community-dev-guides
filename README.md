@@ -1,4 +1,31 @@
-# The 48GB VRAM Playbook: Maximizing Local LLMs – A Community-Driven Guide
+<div align="center">
+
+# The 48GB VRAM Playbook
+### Maximizing Local LLMs: A Community-Driven Guide
+
+[![Community Data](https://img.shields.io/badge/community_data_points-38-blue)](https://reddit.com/r/LocalLLaMA/comments/1ti2ga0/)
+[![Contributors](https://img.shields.io/badge/user_reports-72-green)](https://reddit.com/r/LocalLLaMA/comments/1ti2ga0/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+*Built from 72 real user reports aggregated from [r/LocalLLaMA](https://reddit.com/r/LocalLLaMA/comments/1ti2ga0/). Not another generic LLM guide.*
+
+</div>
+
+## Table of Contents
+
+- [About This Guide](#about-this-guide)
+- [The 48GB VRAM Sweet Spot](#the-48gb-vram-sweet-spot-and-its-limits)
+- [Quick Comparison Matrix](#quick-comparison-matrix-48gb-vram-strategies)
+- [Models, Quantization & Configs](#detailed-feature-breakdown-models-quantization-and-configs)
+- [Performance Benchmarks](#performance-benchmarks--real-world-throughput)
+- [Decision Framework](#when-to-choose-which-strategy)
+- [Cost Analysis](#cost-analysis-maximizing-value-at-48gb)
+- [Gotchas & Warnings](#gotchas-warnings-and-community-wisdom)
+- [Migration Path](#migration-path-beyond-48gb-or-deeper-optimization)
+- [Benchmark Scripts](#run-your-own-benchmarks)
+
+---
+
 
 ## About This Guide
 
@@ -193,11 +220,29 @@ If you frequently hit VRAM limits, find yourself constrained by context, or simp
 
 Key takeaways from the r/LocalLLaMA community include prioritizing Q8 quantization when possible to avoid quality degradation, embracing models like Qwen 27B for their impressive context windows (150k tokens!), and utilizing multi-GPU setups for concurrent AI tasks. While the universal desire for more VRAM persists—and 96GB offers noticeable quality-of-life improvements—your 48GB setup, armed with these community-driven insights, is more than capable of delivering a powerful and fulfilling local LLM experience.
 
-
 ---
+
+## Run Your Own Benchmarks
+
+This repo includes scripts to generate your own data:
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the benchmark suite on your model
+python benchmarks/run_benchmark.py --model-path /path/to/your/model.gguf
+
+# Compare two quantization levels side by side
+python examples/compare_quant_quality.py /path/to/q4_model.gguf /path/to/q8_model.gguf
+```
 
 ## Contributing
 
-Found an error or have better benchmarks? PRs welcome! This guide improves with community input.
+Found an error? Have better benchmarks? Have a different 48GB setup? PRs welcome! This guide improves with community input.
 
-Originally inspired by [this discussion](https://reddit.com/r/LocalLLaMA/comments/1ti2ga0/).
+Originally inspired by [this r/LocalLLaMA discussion](https://reddit.com/r/LocalLLaMA/comments/1ti2ga0/) (135 comments, 124 upvotes).
+
+## License
+
+MIT
