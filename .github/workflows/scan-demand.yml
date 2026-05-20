@@ -1,0 +1,37 @@
+name: Weekly Demand Scan
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'  # Every Monday at 9am UTC
+  workflow_dispatch:  # Manual trigger
+
+permissions:
+  issues: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Scan Reddit for demand signals
+        id: scan
+        run: |
+          python3 scripts/scan_demand.py
+
+      - name: Create issue with demand signals
+        if: steps.scan.outputs.has_signals == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_BODY_FILE: /tmp/issue_body.md
+          SCAN_DATE: ${{ github.event.schedule && 'scheduled' || 'manual' }}
+        run: |
+          TITLE="Weekly Demand Scan: $(date +%Y-%m-%d) ($SCAN_DATE)"
+          gh issue create \
+            --title "$TITLE" \
+            --body-file "$ISSUE_BODY_FILE" \
+            --label "demand-signal"
