@@ -113,9 +113,9 @@ This example demonstrates how to run a Q8 GGUF model using `llama.cpp`, incorpor
 ```bash
 # First, download a model. Let's use Gemma 4 31B Q8 GGUF as an example.
 # Replace with the actual URL from HuggingFace
-# For instance: https://huggingface.co/bartowski/gemma-4-31b-GGUF/resolve/main/gemma-4-31b.Q8_0.gguf
+# For instance: https://huggingface.co/models?search=gemma+gguf+q8
 # You might use `wget` or `curl` or just download manually.
-# wget https://huggingface.co/bartowski/gemma-4-31b-GGUF/resolve/main/gemma-4-31b.Q8_0.gguf -O gemma-4-31b.Q8_0.gguf
+# wget https://huggingface.co/models?search=gemma+gguf+q8 -O gemma-4-31b.Q8_0.gguf
 
 # Assuming 'main' is your llama.cpp executable
 ./main \
@@ -154,14 +154,22 @@ This command attempts to maximize throughput by using advanced `llama.cpp` featu
 
 ---
 
-## Sources
+---
 
-1.  Reddit thread: r/LocalLLaMA "48GB VRAM users, what are your daily drivers?" (user comments, various upvotes)
-2.  Reddit thread: r/LocalLLaMA (user comment by u/Vortax_, 41 upvotes)
-3.  Reddit thread: r/LocalLLaMA (user comment by u/Nuke_The_Earth, 3 upvotes)
-4.  Reddit thread: r/LocalLLaMA (user comment by u/AetherEthereal, 23 upvotes)
-5.  Reddit thread: r/LocalLLaMA (user comment by u/MisterMoof, 5 upvotes)
-6.  Reddit thread: r/LocalLLaMA (user comment by u/fudgebuddies, 14 upvotes)
-7.  Monitors.com product page: NVIDIA RTX Pro 6000 Max-Q 96GB (linked by u/Nuke_The_Earth, 11 upvotes)
-8.  Reddit thread: r/LocalLLaMA (user comment by u/iheartyourface, 8 upvotes)
-9.  Reddit
+## Sources and Links
+
+**Primary source:** [48GB VRAM users, what are your daily drivers?](https://reddit.com/r/LocalLLaMA/comments/1ti2ga0/) (Reddit thread)
+
+**Official documentation:**
+
+- [Meta Llama 3 Models](https://huggingface.co/meta-llama)
+- [Google Gemma Models](https://huggingface.co/google/gemma-2-27b)
+- [Qwen Models](https://huggingface.co/Qwen)
+- [GGUF Format Spec](https://github.com/ggerganov/ggml/blob/master/docs/gguf.md)
+- [llama.cpp](https://github.com/ggerganov/llama.cpp)
+
+**Methodology:** Community comments were scraped and classified by type. Upvote counts are noted but do not constitute independent verification. All community claims are flagged as unverified.
+
+## License
+
+MIT
