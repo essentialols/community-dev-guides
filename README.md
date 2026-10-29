@@ -51,6 +51,18 @@ Every guide is built from real community discussions: actual benchmarks, tested 
 
 ---
 
+## Repository layout
+
+Each guide's full source also lives in this repository under `guides/`:
+
+- `guides/48gb-vram-llm-guide`: 48GB VRAM LLM Playbook (from the standalone 48gb-vram-llm-guide repo)
+- `guides/ai-infrastructure-as-code-guide`: AI for Infrastructure as Code (from the standalone ai-infrastructure-as-code-guide repo)
+- `guides/devops-platform-engineering-guide`: DevOps to Platform Engineering (from the standalone devops-platform-engineering-guide repo)
+- `guides/entry-level-dev-survival-guide`: Entry-Level Dev Survival Guide (from the standalone entry-level-dev-survival-guide repo)
+- `guides/go-modular-monolith-guide`: Go Modular Monolith Architecture (from the standalone go-modular-monolith-guide repo)
+
+---
+
 ## How These Guides Are Made
 
 1. **Demand scanning**: Reddit and StackOverflow are monitored for high-engagement questions (20+ comments, specific technical topics)
